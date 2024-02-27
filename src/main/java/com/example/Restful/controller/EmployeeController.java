@@ -1,4 +1,4 @@
-package com.example.Restful;
+package com.example.Restful.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
