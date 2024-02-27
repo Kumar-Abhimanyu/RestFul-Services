@@ -1,9 +1,7 @@
 package com.example.Restful.controller;
 import com.example.Restful.Model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,6 +23,10 @@ public class StudentController {
         return studentService.findStudent(id);
 
     }
-
+    @RequestMapping(method = RequestMethod.POST, value ="students")
+    public void addStudent(@RequestBody Student student) {
+        System.out.println("controllers add student");
+        studentService.addStudent(student);
+    }
 
 }

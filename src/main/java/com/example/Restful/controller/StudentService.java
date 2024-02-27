@@ -32,4 +32,8 @@ public class StudentService {
                 .findFirst()
                 .get();
     }
+    public void addStudent(Student student) {
+        students.add(student);
+        System.out.println("added a student");
+    }
 }
