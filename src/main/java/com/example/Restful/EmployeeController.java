@@ -18,6 +18,11 @@ public class EmployeeController {
         return "the sum is";
     }
 
+    @GetMapping("square/{number}")
+    String square(@PathVariable int number){
+        return "The square of " + number +" is "+(number*number);
+    }
+
     @GetMapping("/weather/{cityname}")
     String getWeather(@PathVariable String cityname){
         return  cityname + "'s weather is good";
